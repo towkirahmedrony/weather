@@ -193,4 +193,62 @@
     <string name="settings_data_desc">Forecast &amp; Air Quality: Open-Meteo (ECMWF/GFS/ICON, CC BY 4.0)\nRadar Layer: RainViewer\nBase Map: CartoDB / OpenStreetMap\nBangladesh Statutory Advisories: Consult BMD (bmd.gov.bd)</string>
     <string name="notif_channel_updates">Weather Updates</string>
     <string name="notif_channel_alerts">Rain &amp; Severe Alerts</string>
+
+    <!-- Redesigned Today / Air / Details screens -->
+    <string name="nav_today">Today</string>
+    <string name="nav_air">Air</string>
+    <string name="nav_details">Details</string>
+
+    <string name="section_next_hours">NEXT HOURS</string>
+    <string name="section_this_week">THIS WEEK</string>
+    <string name="section_air_quality_aqi">AIR QUALITY · US AQI</string>
+    <string name="section_bd_insights">BANGLADESH INSIGHTS</string>
+    <string name="high_low_short_fmt">H %1$s · L %2$s</string>
+    <string name="detail_uv">UV</string>
+    <string name="detail_rain">Rain</string>
+    <string name="unit_hpa">hPa</string>
+    <string name="unit_km">km</string>
+    <string name="unit_ugm3">µg/m³</string>
+
+    <string name="title_air_quality">Air quality</string>
+    <string name="title_details">Details</string>
+    <string name="aqi_chip_windows">Keep windows closed</string>
+    <string name="aqi_chip_outdoor">Limit outdoor activity</string>
+    <string name="aqi_unavailable">Air quality data is unavailable for this location right now.</string>
+
+    <string name="sun_set_ago_fmt">Sun set %s ago</string>
+    <string name="sunrise_in_fmt">Sunrise in %s</string>
+    <string name="sun_daylight_left_fmt">Daylight left %s</string>
+    <string name="duration_hours_fmt">%d h</string>
+    <string name="duration_minutes_fmt">%d min</string>
+    <string name="actual_temp_fmt">Actual %s</string>
+    <string name="gusts_from_fmt">From %s</string>
+
+    <string name="visibility_w_clear">Clear</string>
+    <string name="visibility_w_good">Good</string>
+    <string name="visibility_w_hazy">Hazy</string>
+    <string name="visibility_w_fog">Fog</string>
+    <string name="cloud_w_partly">Partly cloudy</string>
+    <string name="cloud_w_mostly">Mostly cloudy</string>
+    <string name="dew_w_dry">Dry</string>
+    <string name="dew_w_pleasant">Pleasant</string>
+    <string name="dew_w_comfortable">Comfortable</string>
+    <string name="dew_w_humid">Humid</string>
+    <string name="dew_w_sticky">Sticky</string>
+
+    <string name="bd_heat_index_short">Heat index</string>
+    <string name="bd_humidity_short">Humidity load</string>
+    <string name="bd_storm_short">Storm / lightning</string>
+    <string name="bd_rain_short">Monsoon &amp; rain</string>
+    <string name="bd_wind_short">Coastal &amp; gale wind</string>
+    <string name="bd_status_all_normal">All normal</string>
+    <string name="bd_status_watch">Watch</string>
+    <string name="bd_status_elevated">Elevated</string>
+    <string name="bd_status_severe">Severe</string>
+    <string name="bd_humidity_comfortable">Comfortable</string>
+    <string name="bd_humidity_muggy">Muggy</string>
+    <string name="bd_humidity_oppressive">Oppressive</string>
+    <string name="bd_humidity_extreme">Extreme</string>
+    <string name="bd_source_short">Derived from Open-Meteo data. Not an official warning. For cyclone, lightning and flood bulletins, see live.bmd.gov.bd.</string>
+    <string name="rain_next_12h">Next 12 hours</string>
 </resources>

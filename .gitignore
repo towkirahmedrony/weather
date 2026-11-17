@@ -32,3 +32,6 @@ google-services.json
 ci-release.jks
 *.apk
 *.aab
+
+# Design reference screenshots (never committed)
+design_refs/

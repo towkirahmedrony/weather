@@ -193,4 +193,62 @@
     <string name="settings_data_desc">পূর্বাভাস ও বায়ুর মান: Open-Meteo (ECMWF/GFS/ICON, CC BY 4.0)\nরাডার স্তর: RainViewer\nমানচিত্র: CartoDB / OpenStreetMap\nবাংলাদেশ সরকারি সতর্কতা: বাংলাদেশ আবহাওয়া অধিদপ্তর (bmd.gov.bd)</string>
     <string name="notif_channel_updates">আবহাওয়া আপডেট</string>
     <string name="notif_channel_alerts">বৃষ্টি ও দুর্যোগ সতর্কতা</string>
+
+    <!-- Redesigned Today / Air / Details screens -->
+    <string name="nav_today">আজ</string>
+    <string name="nav_air">বায়ু</string>
+    <string name="nav_details">বিস্তারিত</string>
+
+    <string name="section_next_hours">পরবর্তী ঘণ্টা</string>
+    <string name="section_this_week">এই সপ্তাহ</string>
+    <string name="section_air_quality_aqi">বায়ুর মান · US AQI</string>
+    <string name="section_bd_insights">বাংলাদেশের তথ্য</string>
+    <string name="high_low_short_fmt">সর্বোচ্চ %1$s · সর্বনিম্ন %2$s</string>
+    <string name="detail_uv">UV</string>
+    <string name="detail_rain">বৃষ্টি</string>
+    <string name="unit_hpa">hPa</string>
+    <string name="unit_km">কিমি</string>
+    <string name="unit_ugm3">µg/m³</string>
+
+    <string name="title_air_quality">বায়ুর মান</string>
+    <string name="title_details">বিস্তারিত</string>
+    <string name="aqi_chip_windows">জানালা বন্ধ রাখুন</string>
+    <string name="aqi_chip_outdoor">বাইরের কাজ কমান</string>
+    <string name="aqi_unavailable">এই মুহূর্তে এই অবস্থানের বায়ুর মানের তথ্য পাওয়া যাচ্ছে না।</string>
+
+    <string name="sun_set_ago_fmt">সূর্যাস্ত হয়েছে %s আগে</string>
+    <string name="sunrise_in_fmt">সূর্যোদয় হবে %s পরে</string>
+    <string name="sun_daylight_left_fmt">দিনের আলো বাকি %s</string>
+    <string name="duration_hours_fmt">%d ঘণ্টা</string>
+    <string name="duration_minutes_fmt">%d মিনিট</string>
+    <string name="actual_temp_fmt">প্রকৃত %s</string>
+    <string name="gusts_from_fmt">%s থেকে</string>
+
+    <string name="visibility_w_clear">পরিষ্কার</string>
+    <string name="visibility_w_good">ভালো</string>
+    <string name="visibility_w_hazy">ধোঁয়াশা</string>
+    <string name="visibility_w_fog">কুয়াশা</string>
+    <string name="cloud_w_partly">আংশিক মেঘলা</string>
+    <string name="cloud_w_mostly">প্রায় মেঘাচ্ছন্ন</string>
+    <string name="dew_w_dry">শুষ্ক</string>
+    <string name="dew_w_pleasant">আরামদায়ক</string>
+    <string name="dew_w_comfortable">স্বস্তিকর</string>
+    <string name="dew_w_humid">আর্দ্র</string>
+    <string name="dew_w_sticky">গুমোট</string>
+
+    <string name="bd_heat_index_short">তাপ সূচক</string>
+    <string name="bd_humidity_short">আর্দ্রতার চাপ</string>
+    <string name="bd_storm_short">বজ্রপাতের ঝুঁকি</string>
+    <string name="bd_rain_short">মৌসুমি বৃষ্টি</string>
+    <string name="bd_wind_short">উপকূলীয় ঝড়ো বাতাস</string>
+    <string name="bd_status_all_normal">সব স্বাভাবিক</string>
+    <string name="bd_status_watch">সতর্কতা</string>
+    <string name="bd_status_elevated">উচ্চ</string>
+    <string name="bd_status_severe">তীব্র</string>
+    <string name="bd_humidity_comfortable">স্বস্তিকর</string>
+    <string name="bd_humidity_muggy">গুমোট</string>
+    <string name="bd_humidity_oppressive">অসহ্য</string>
+    <string name="bd_humidity_extreme">চরম</string>
+    <string name="bd_source_short">Open-Meteo-এর তথ্য থেকে প্রাপ্ত। এটি সরকারি সতর্কবার্তা নয়। ঘূর্ণিঝড়, বজ্রপাত ও বন্যার বুলেটিনের জন্য live.bmd.gov.bd দেখুন।</string>
+    <string name="rain_next_12h">আগামী ১২ ঘণ্টা</string>
 </resources>

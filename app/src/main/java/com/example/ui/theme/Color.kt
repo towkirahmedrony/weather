@@ -1,6 +1,7 @@
 package com.example.ui.theme
 
 import androidx.compose.ui.graphics.Color
+import com.example.domain.model.AqiCategory
 
 // Core Brand & M3 Neutrals
 val AtmosSkyBlue = Color(0xFF38BDF8)
@@ -19,6 +20,71 @@ val AtmosStormViolet = Color(0xFFA78BFA)
 val AtmosAlertCoral = Color(0xFFFB7185)
 val AtmosGoodEmerald = Color(0xFF34D399)
 val AtmosWarnOrange = Color(0xFFFB923C)
+
+/**
+ * Redesign tokens. These come straight from the three reference exports in design_refs/
+ * (Today@2x, Air@2x, Details@2x) and are the single source of truth for the
+ * Today / Air / Details screens.
+ */
+object AtmosColors {
+    val Background = Color(0xFF0E1418)
+    val Card = Color(0xFF172026)
+
+    // Nav bar top border & in-card dividers
+    val NavBorder = Color(0xFF1F2A31)
+    val Divider = Color(0xFF222F37)
+
+    val TextPrimary = Color(0xFFEAF0F3)
+    val TextMuted = Color(0xFF93A4AE)
+
+    // Selected tab, "Now" label, location pin
+    val Accent = Color(0xFF5CC8D7)
+    // Rain / precipitation probability
+    val Rain = Color(0xFF7FB2FF)
+    // Outline tint for weather line icons
+    val CloudStroke = Color(0xFFC5D2D9)
+    // "All normal" status dots
+    val StatusGreen = Color(0xFF6FD6A0)
+
+    // AQI category text color (matches the Very Unhealthy headline in Air@2x)
+    val AqiVeryUnhealthyText = Color(0xFFBC9CF2)
+
+    // AQI scale segments, in order
+    val AqiGood = Color(0xFF4CAF7A)
+    val AqiModerate = Color(0xFFE3C94F)
+    val AqiSensitive = Color(0xFFF29B4B)
+    val AqiUnhealthy = Color(0xFFE5594F)
+    val AqiVeryUnhealthy = Color(0xFFA97CE8)
+    val AqiHazardous = Color(0xFF7A2F4B)
+
+    // Warm dot used for the sun on the daylight arc
+    val SunDot = Color(0xFFF3C46A)
+
+    val AqiScaleColors = listOf(
+        AqiGood,
+        AqiModerate,
+        AqiSensitive,
+        AqiUnhealthy,
+        AqiVeryUnhealthy,
+        AqiHazardous
+    )
+
+    /**
+     * Segment flex weights of the scale bar. Together they add up to 350, which is
+     * also the AQI range the marker is normalised against (aqi / 350).
+     */
+    val AqiScaleWeights = listOf(50f, 50f, 50f, 50f, 100f, 50f)
+    const val AQI_SCALE_MAX = 350f
+
+    fun aqiColor(category: AqiCategory): Color = when (category) {
+        AqiCategory.GOOD -> AqiGood
+        AqiCategory.MODERATE -> AqiModerate
+        AqiCategory.SENSITIVE -> AqiSensitive
+        AqiCategory.UNHEALTHY -> AqiUnhealthy
+        AqiCategory.VERY_UNHEALTHY -> AqiVeryUnhealthyText
+        AqiCategory.HAZARDOUS -> AqiHazardous
+    }
+}
 
 // Atmospheric Sky Palettes (Top, Mid, Bottom)
 object AtmosphericPalettes {

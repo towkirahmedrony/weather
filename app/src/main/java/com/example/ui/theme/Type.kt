@@ -27,6 +27,110 @@ val JetBrainsMono = FontFamily(
     Font(R.font.jetbrains_mono, FontWeight.Medium)
 )
 
+/**
+ * Type ramp for the Today / Air / Details redesign: Inter throughout, with the
+ * oversized weight-200 temperature and AQI numerals from the reference exports.
+ * Letter spacing is expressed in sp so it stays proportional to the font size
+ * (0.08em on an 11sp label = 0.88sp, -0.04em on the 104sp hero = -4.16sp).
+ */
+object AtmosType {
+    val HeroTemp = TextStyle(
+        fontFamily = InterFont,
+        fontWeight = FontWeight(200),
+        fontSize = 104.sp,
+        lineHeight = 96.sp,
+        letterSpacing = (-4.16).sp
+    )
+
+    val AqiNumber = TextStyle(
+        fontFamily = InterFont,
+        fontWeight = FontWeight(200),
+        fontSize = 112.sp,
+        lineHeight = 108.sp,
+        letterSpacing = (-4.5).sp
+    )
+
+    val AqiNumberSmall = TextStyle(
+        fontFamily = InterFont,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 42.sp,
+        lineHeight = 40.sp,
+        letterSpacing = (-1).sp
+    )
+
+    val Condition = TextStyle(
+        fontFamily = InterFont,
+        fontWeight = FontWeight.Medium,
+        fontSize = 18.sp,
+        lineHeight = 24.sp
+    )
+
+    val CategoryLarge = TextStyle(
+        fontFamily = InterFont,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 20.sp,
+        lineHeight = 26.sp
+    )
+
+    val NumberLarge = TextStyle(
+        fontFamily = InterFont,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 22.sp,
+        lineHeight = 26.sp
+    )
+
+    val Value = TextStyle(
+        fontFamily = InterFont,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 17.sp,
+        lineHeight = 22.sp
+    )
+
+    val SectionLabel = TextStyle(
+        fontFamily = InterFont,
+        fontWeight = FontWeight.Medium,
+        fontSize = 11.sp,
+        lineHeight = 14.sp,
+        letterSpacing = 0.88.sp
+    )
+
+    val Body = TextStyle(
+        fontFamily = InterFont,
+        fontWeight = FontWeight.Normal,
+        fontSize = 15.sp,
+        lineHeight = 21.sp
+    )
+
+    val Meta = TextStyle(
+        fontFamily = InterFont,
+        fontWeight = FontWeight.Normal,
+        fontSize = 13.sp,
+        lineHeight = 18.sp
+    )
+
+    val Caption = TextStyle(
+        fontFamily = InterFont,
+        fontWeight = FontWeight.Normal,
+        fontSize = 12.sp,
+        lineHeight = 16.sp
+    )
+
+    val NavLabel = TextStyle(
+        fontFamily = InterFont,
+        fontWeight = FontWeight.Medium,
+        fontSize = 11.sp,
+        lineHeight = 13.sp,
+        letterSpacing = 0.2.sp
+    )
+
+    val Disclaimer = TextStyle(
+        fontFamily = InterFont,
+        fontWeight = FontWeight.Normal,
+        fontSize = 11.sp,
+        lineHeight = 16.sp
+    )
+}
+
 val AtmosTypography = Typography(
     displayLarge = TextStyle(
         fontFamily = PlusJakartaSans,

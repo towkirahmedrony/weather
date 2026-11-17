@@ -48,6 +48,20 @@ object UnitFormatter {
         PrecipitationUnit.INCH -> "${"%.2f".format(Locale.US, mm / 25.4)} in"
     }
 
+    /** Wind split into a compact value plus its unit, for the small metric tiles. */
+    fun windValueAndUnit(speedKmh: Double, unit: WindSpeedUnit): Pair<String, String> = when (unit) {
+        WindSpeedUnit.KMH -> speedKmh.roundToInt().toString() to "km/h"
+        WindSpeedUnit.MS -> "%.1f".format(Locale.US, speedKmh / 3.6) to "m/s"
+        WindSpeedUnit.MPH -> (speedKmh * 0.621371).roundToInt().toString() to "mph"
+        WindSpeedUnit.KNOTS -> (speedKmh * 0.539957).roundToInt().toString() to "kt"
+    }
+
+    /** Precipitation split into a compact value plus its unit. */
+    fun precipValueAndUnit(mm: Double, unit: PrecipitationUnit): Pair<String, String> = when (unit) {
+        PrecipitationUnit.MM -> "%.1f".format(Locale.US, mm) to "mm"
+        PrecipitationUnit.INCH -> "%.2f".format(Locale.US, mm / 25.4) to "in"
+    }
+
     fun compassDirection(degrees: Int, isBangla: Boolean = false): String {
         val en = listOf("N", "NE", "E", "SE", "S", "SW", "W", "NW")
         val bn = listOf("উঃ", "উঃ-পূঃ", "পূঃ", "দঃ-পূঃ", "দঃ", "দঃ-পঃ", "পঃ", "উঃ-পঃ")
@@ -115,6 +129,15 @@ object UnitFormatter {
             val tz = TimeZone.getTimeZone(timezoneId)
             val locale = if (language == AppLanguage.BANGLA) Locale("bn", "BD") else Locale.ENGLISH
             SimpleDateFormat("h:mm a", locale).apply { timeZone = tz }.format(Date())
+        }.getOrDefault("")
+    }
+
+    /** "Tue, 7:12 PM" in the forecast location's timezone. */
+    fun formatLocalDayClock(timezoneId: String, language: AppLanguage): String {
+        return runCatching {
+            val tz = TimeZone.getTimeZone(timezoneId)
+            val locale = if (language == AppLanguage.BANGLA) Locale("bn", "BD") else Locale.ENGLISH
+            SimpleDateFormat("EEE, h:mm a", locale).apply { timeZone = tz }.format(Date())
         }.getOrDefault("")
     }
 
