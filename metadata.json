@@ -1,0 +1,6 @@
+{
+  "name": "Atmos",
+  "description": "Atmospheric native Android weather application with live forecasts, air quality, interactive weather maps, home screen widgets, and Bangladesh severe weather advisories.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

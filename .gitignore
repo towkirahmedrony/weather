@@ -1,0 +1,34 @@
+# Gradle / build artifacts
+.gradle/
+.kotlin/
+**/build/
+/captures
+.externalNativeBuild
+.cxx
+
+# Local IDE / OS files
+*.iml
+/.idea
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/.vscode
+.DS_Store
+
+# Local configuration (machine specific)
+local.properties
+/local.properties
+
+# Secrets & credentials (never commit)
+.env
+.env.*
+!.env.example
+google-services.json
+*.jks
+*.keystore
+ci-release.jks
+*.apk
+*.aab

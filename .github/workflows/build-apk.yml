@@ -1,0 +1,91 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Least-privilege permissions: only need to read the repository and upload artifacts.
+permissions:
+  contents: read
+
+concurrency:
+  group: apk-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build signed release APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install required Android SDK components
+        run: |
+          sdkmanager --install \
+            "platforms;android-36" \
+            "build-tools;36.0.0" \
+            "platform-tools"
+
+      - name: Set up Gradle (with caching)
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Make Gradle wrapper executable
+        run: chmod +x ./gradlew
+
+      # The app's signing configs reference local keystores that are intentionally
+      # not committed. Generate throwaway, run-scoped keystores in CI so both the
+      # debug and release variants can be signed without any stored secrets.
+      # The release password is random and masked so it never appears in logs.
+      - name: Generate CI signing keystores
+        run: |
+          set -euo pipefail
+          keytool -genkeypair -v \
+            -keystore "${GITHUB_WORKSPACE}/debug.keystore" \
+            -alias androiddebugkey -storepass android -keypass android \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname "CN=Android Debug,O=Android,C=US" >/dev/null 2>&1
+
+          CI_PASSWORD="$(openssl rand -base64 24)"
+          echo "::add-mask::${CI_PASSWORD}"
+          keytool -genkeypair -v \
+            -keystore "${GITHUB_WORKSPACE}/ci-release.jks" \
+            -alias upload -storepass "${CI_PASSWORD}" -keypass "${CI_PASSWORD}" \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname "CN=Atmos CI Build,O=Atmos,C=US" >/dev/null 2>&1
+
+          {
+            echo "KEYSTORE_PATH=${GITHUB_WORKSPACE}/ci-release.jks"
+            echo "STORE_PASSWORD=${CI_PASSWORD}"
+            echo "KEY_PASSWORD=${CI_PASSWORD}"
+          } >> "$GITHUB_ENV"
+
+      - name: Build release APK
+        run: ./gradlew --no-daemon :app:assembleRelease
+
+      - name: Verify APK output
+        run: |
+          set -euo pipefail
+          APK=$(find app/build/outputs/apk/release -name '*.apk' -type f | head -n1)
+          test -n "$APK" && test -s "$APK"
+          echo "Built: $APK"
+
+      - name: Upload release APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: atmos-release-apk
+          path: app/build/outputs/apk/release/*.apk
+          if-no-files-found: error
+          retention-days: 30

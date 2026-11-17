@@ -1,0 +1,196 @@
+<resources>
+    <string name="app_name">অ্যাটমস</string>
+
+    <!-- Widgets -->
+    <string name="widget_current_name">অ্যাটমস বর্তমান আবহাওয়া</string>
+    <string name="widget_forecast_name">অ্যাটমস পূর্বাভাস</string>
+    <string name="widget_feels_like_fmt">অনুভূত %s</string>
+    <string name="widget_high_low_fmt">সর্বোচ্চ:%1$s  সর্বনিম্ন:%2$s</string>
+    <string name="widget_tap_to_open">আপডেট করতে ট্যাপ করুন</string>
+
+    <!-- Navigation & Top Bar -->
+    <string name="nav_home">আবহাওয়া</string>
+    <string name="nav_map">আবহাওয়া মানচিত্র</string>
+    <string name="nav_locations">শহরসমূহ</string>
+    <string name="nav_settings">সেটিংস</string>
+    <string name="cd_open_map">আবহাওয়া মানচিত্র খুলুন</string>
+    <string name="cd_open_locations">সংরক্ষিত শহর দেখুন</string>
+    <string name="cd_open_settings">সেটিংস খুলুন</string>
+    <string name="cd_back">ফিরে যান</string>
+    <string name="cd_refresh">আবহাওয়া রিফ্রেশ করুন</string>
+    <string name="cd_gps_location">বর্তমান জিপিএস অবস্থান ব্যবহার করুন</string>
+    <string name="cd_switch_location">শহর পরিবর্তন করুন</string>
+
+    <!-- Status & Errors -->
+    <string name="status_loading">আবহাওয়ার তথ্য আনা হচ্ছে…</string>
+    <string name="status_offline_cache">অফলাইন ক্যাশ</string>
+    <string name="status_updated_just_now">এইমাত্র আপডেট হয়েছে</string>
+    <string name="status_updated_mins_ago">%d মিনিট আগে আপডেট</string>
+    <string name="status_updated_hours_ago">%d ঘণ্টা আগে আপডেট</string>
+    <string name="error_network_title">আবহাওয়া সার্ভারে সংযোগ করা যায়নি</string>
+    <string name="error_network_subtitle">ইন্টারনেট সংযোগ পরীক্ষা করুন অথবা পুনরায় চেষ্টা করুন।</string>
+    <string name="action_retry">আবার চেষ্টা করুন</string>
+    <string name="action_choose_city">শহর নির্বাচন করুন</string>
+    <string name="location_permission_banner_title">জিপিএস-এর মাধ্যমে স্থানীয় আবহাওয়া</string>
+    <string name="location_permission_banner_desc">স্বয়ংক্রিয় পূর্বাভাসের জন্য অবস্থানের অনুমতি দিন অথবা ম্যানুয়ালি শহর বেছে নিন।</string>
+    <string name="action_allow_location">অনুমতি দিন</string>
+
+    <!-- Home Sections -->
+    <string name="feels_like_fmt">অনুভূত তাপমাত্রা %s</string>
+    <string name="high_low_fmt">সর্বোচ্চ:%1$s  সর্বনিম্ন:%2$s</string>
+    <string name="section_hourly">২৪ ঘণ্টার পূর্বাভাস</string>
+    <string name="section_daily">৭ দিনের পূর্বাভাস</string>
+    <string name="section_rain">বৃষ্টির পূর্বাভাস</string>
+    <string name="section_details">বায়ুমণ্ডলীয় তথ্য</string>
+    <string name="section_aqi">বায়ুর মান (AQI)</string>
+    <string name="section_sun_moon">সূর্য ও চাঁদ</string>
+    <string name="section_bangladesh">বাংলাদেশ আবহাওয়া সতর্কতা ও বিশ্লেষণ</string>
+
+    <!-- Hourly & Daily -->
+    <string name="hourly_now">এখন</string>
+    <string name="daily_today">আজ</string>
+    <string name="daily_uv_max">সর্বোচ্চ UV</string>
+    <string name="daily_wind_gust">দমকা হাওয়া</string>
+    <string name="daily_precip_total">বৃষ্টিপাত</string>
+    <string name="daily_humidity_mean">আর্দ্রতা</string>
+
+    <!-- Rain Forecast -->
+    <string name="rain_expected_24h">আগামী ২৪ ঘণ্টায় সম্ভাব্য বৃষ্টি</string>
+    <string name="rain_peak_prob">সর্বোচ্চ সম্ভাবনা</string>
+    <string name="rain_intensity_none">শুষ্ক</string>
+    <string name="rain_intensity_light">হালকা বৃষ্টি</string>
+    <string name="rain_intensity_moderate">মাঝারি বৃষ্টি</string>
+    <string name="rain_intensity_heavy">ভারী বৃষ্টি</string>
+    <string name="rain_intensity_violent">অতি ভারী বর্ষণ</string>
+
+    <!-- Weather Details -->
+    <string name="detail_humidity">আর্দ্রতা</string>
+    <string name="detail_dew_point">শিশিরাঙ্ক</string>
+    <string name="detail_wind">বাতাস</string>
+    <string name="detail_gusts">দমকা হাওয়া</string>
+    <string name="detail_uv_index">UV সূচক</string>
+    <string name="detail_visibility">দৃশ্যমানতা</string>
+    <string name="detail_pressure">বায়ুচাপ</string>
+    <string name="detail_cloud_cover">মেঘাচ্ছন্নতা</string>
+    <string name="detail_feels_like">অনুভূত তাপমাত্রা</string>
+    <string name="uv_low">কম</string>
+    <string name="uv_moderate">মাঝারি</string>
+    <string name="uv_high">বেশি</string>
+    <string name="uv_very_high">অত্যধিক</string>
+    <string name="uv_extreme">চরম</string>
+    <string name="pressure_rising">বাড়ছে</string>
+    <string name="pressure_falling">কমছে</string>
+    <string name="pressure_steady">স্থিতিশীল</string>
+    <string name="visibility_excellent">সম্পূর্ণ পরিষ্কার দিগন্ত</string>
+    <string name="visibility_good">পরিষ্কার দৃশ্যমানতা</string>
+    <string name="visibility_moderate">হালকা ধোঁয়াশা</string>
+    <string name="visibility_poor">ঘন কুয়াশা বা ধোঁয়াশা</string>
+
+    <!-- Air Quality -->
+    <string name="aqi_us_label">US AQI</string>
+    <string name="aqi_good">ভালো</string>
+    <string name="aqi_moderate">সহনীয়</string>
+    <string name="aqi_sensitive">সংবেদনশীলদের জন্য অস্বাস্থ্যকর</string>
+    <string name="aqi_unhealthy">অস্বাস্থ্যকর</string>
+    <string name="aqi_very_unhealthy">খুবই অস্বাস্থ্যকর</string>
+    <string name="aqi_hazardous">বিপজ্জনক</string>
+    <string name="aqi_advice_good">বায়ুর মান পরিষ্কার। বাইরের কাজের জন্য উপযুক্ত সময়।</string>
+    <string name="aqi_advice_moderate">বায়ুর মান সহনীয়। শ্বাসকষ্টে সংবেদনশীলরা সতর্ক থাকুন।</string>
+    <string name="aqi_advice_sensitive">শ্বাসকষ্ট বা অ্যাজমা থাকলে দীর্ঘক্ষণ বাইরে পরিশ্রম এড়িয়ে চলুন।</string>
+    <string name="aqi_advice_unhealthy">বাইরে বের হলে মাস্ক ব্যবহার করুন এবং ভারী পরিশ্রম কমান।</string>
+    <string name="aqi_advice_very_unhealthy">স্বাস্থ্য সতর্কতা: বাইরে ব্যায়াম এড়িয়ে চলুন এবং জানালা বন্ধ রাখুন।</string>
+    <string name="aqi_advice_hazardous">বিপজ্জনক বায়ু: ঘরের ভেতরে থাকুন এবং অপ্রয়োজনীয় বাইরে যাওয়া বন্ধ রাখুন।</string>
+    <string name="aqi_pm25">PM2.5</string>
+    <string name="aqi_pm10">PM10</string>
+    <string name="aqi_o3">O₃</string>
+    <string name="aqi_no2">NO₂</string>
+    <string name="aqi_so2">SO₂</string>
+    <string name="aqi_co">CO</string>
+
+    <!-- Sun & Moon -->
+    <string name="sunrise">সূর্যোদয়</string>
+    <string name="sunset">সূর্যাস্ত</string>
+    <string name="daylight_duration">দিনের দৈর্ঘ্য</string>
+    <string name="moonrise">চন্দ্রোদয়</string>
+    <string name="moonset">চন্দ্রাস্ত</string>
+    <string name="illumination_fmt">%d%% আলোকিত</string>
+    <string name="moon_new">অমাবস্যা</string>
+    <string name="moon_waxing_crescent">শুক্লা প্রতিপদ</string>
+    <string name="moon_first_quarter">শুক্লা অষ্টমী</string>
+    <string name="moon_waxing_gibbous">শুক্লা একাদশী</string>
+    <string name="moon_full">পূর্ণিমা</string>
+    <string name="moon_waning_gibbous">কৃষ্ণা তৃতীয়া</string>
+    <string name="moon_last_quarter">কৃষ্ণা অষ্টমী</string>
+    <string name="moon_waning_crescent">কৃষ্ণা চতুর্দশী</string>
+
+    <!-- Weather Conditions -->
+    <string name="cond_clear">পরিষ্কার আকাশ</string>
+    <string name="cond_mostly_clear">প্রায় পরিষ্কার</string>
+    <string name="cond_partly_cloudy">আংশিক মেঘলা</string>
+    <string name="cond_overcast">মেঘাচ্ছন্ন</string>
+    <string name="cond_fog">কুয়াশা</string>
+    <string name="cond_drizzle">গুঁড়ি গুঁড়ি বৃষ্টি</string>
+    <string name="cond_rain">বৃষ্টি</string>
+    <string name="cond_heavy_rain">ভারী বৃষ্টি</string>
+    <string name="cond_thunderstorm">বজ্রবৃষ্টি</string>
+    <string name="cond_snow">তুষারপাত</string>
+    <string name="cond_squall">দমকা ঝোড়ো হাওয়া</string>
+
+    <!-- Bangladesh Specific Advisories -->
+    <string name="bd_heat_index">তাপ সূচক (Heat Index)</string>
+    <string name="bd_humidity_load">আর্দ্রতা ও গুমোট</string>
+    <string name="bd_storm_cape">কালবৈশাখী / বজ্রপাত ঝুঁকি</string>
+    <string name="bd_monsoon_rain">মৌসুমি ও ভারী বৃষ্টি পর্যবেক্ষণ</string>
+    <string name="bd_cyclone_wind">উপকূলীয় ও ঝোড়ো বাতাস</string>
+    <string name="bd_source_disclaimer">এই বিশ্লেষণ Open-Meteo-এর বায়ুমণ্ডলীয়, CAPE ও বাতাসের মডেল থেকে প্রাপ্ত। এটি সরকারি সতর্কবার্তা নয়—বাংলাদেশে ঘূর্ণিঝড়, বজ্রপাত ও বন্যার সরকারি পূর্বাভাসের জন্য বাংলাদেশ আবহাওয়া অধিদপ্তর (BMD: live.bmd.gov.bd) দেখুন।</string>
+
+    <!-- Weather Map -->
+    <string name="map_title">আবহাওয়া মানচিত্র</string>
+    <string name="layer_precipitation">বৃষ্টিপাত</string>
+    <string name="layer_temperature">তাপমাত্রা</string>
+    <string name="layer_clouds">মেঘ</string>
+    <string name="layer_wind">বাতাস</string>
+    <string name="map_radar_live">লাইভ রাডার</string>
+    <string name="map_grid_live">লাইভ মডেল গ্রিড</string>
+    <string name="map_tap_hint">মানচিত্র সরাতে ও জুম করতে ড্র্যাগ বা পিঞ্চ করুন। স্টেশনে ট্যাপ করে তথ্য দেখুন।</string>
+
+    <!-- Saved Locations -->
+    <string name="locations_title">সংরক্ষিত শহর</string>
+    <string name="search_city_hint">বিশ্বের যেকোনো শহর খুঁজুন (যেমন: Dhaka, Sylhet)…</string>
+    <string name="compare_mode">তুলনা করুন</string>
+    <string name="compare_done">সম্পন্ন</string>
+    <string name="compare_select_hint">পাশাপাশি তুলনা করতে ২–৩টি শহর নির্বাচন করুন</string>
+    <string name="bangladesh_quick_cities">বাংলাদেশের শহরসমূহ</string>
+    <string name="current_gps_badge">জিপিএস</string>
+    <string name="no_search_results">কোনো শহর পাওয়া যায়নি</string>
+    <string name="delete_location">মুছুন</string>
+
+    <!-- Settings -->
+    <string name="settings_title">সেটিংস</string>
+    <string name="settings_appearance">চেহারা ও থিম</string>
+    <string name="settings_theme">থিম</string>
+    <string name="theme_system">সিস্টেম</string>
+    <string name="theme_light">লাইট</string>
+    <string name="theme_dark">ডার্ক</string>
+    <string name="settings_language">ভাষা</string>
+    <string name="lang_english">English</string>
+    <string name="lang_bangla">বাংলা (Bangla)</string>
+    <string name="settings_units">একক (Units)</string>
+    <string name="settings_temp_unit">তাপমাত্রা</string>
+    <string name="settings_wind_unit">বাতাসের গতি</string>
+    <string name="settings_precip_unit">বৃষ্টিপাত</string>
+    <string name="settings_location_section">অবস্থান ও সিঙ্ক</string>
+    <string name="settings_location_perm">লোকেশন অনুমতি</string>
+    <string name="perm_granted">অনুমোদিত (আনুমানিক)</string>
+    <string name="perm_denied">অনুমতি নেই — ম্যানুয়াল মোড</string>
+    <string name="settings_sync_interval">স্বয়ংক্রিয় আপডেট বিরতি</string>
+    <string name="settings_sync_now">এখনই আপডেট করুন</string>
+    <string name="settings_notifications">বিজ্ঞপ্তি (Notifications)</string>
+    <string name="settings_notif_updates">দৈনিক আবহাওয়া আপডেট</string>
+    <string name="settings_notif_rain">বৃষ্টির সতর্কতা</string>
+    <string name="settings_notif_severe">বজ্রপাত ও দুর্যোগ সতর্কতা</string>
+    <string name="settings_data_sources">তথ্যের উৎস ও স্বীকৃতি</string>
+    <string name="settings_data_desc">পূর্বাভাস ও বায়ুর মান: Open-Meteo (ECMWF/GFS/ICON, CC BY 4.0)\nরাডার স্তর: RainViewer\nমানচিত্র: CartoDB / OpenStreetMap\nবাংলাদেশ সরকারি সতর্কতা: বাংলাদেশ আবহাওয়া অধিদপ্তর (bmd.gov.bd)</string>
+    <string name="notif_channel_updates">আবহাওয়া আপডেট</string>
+    <string name="notif_channel_alerts">বৃষ্টি ও দুর্যোগ সতর্কতা</string>
+</resources>
