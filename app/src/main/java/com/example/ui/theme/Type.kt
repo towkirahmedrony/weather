@@ -38,7 +38,7 @@ object AtmosType {
         fontFamily = InterFont,
         fontWeight = FontWeight(200),
         fontSize = 104.sp,
-        lineHeight = 96.sp,
+        lineHeight = 104.sp,
         letterSpacing = (-4.16).sp
     )
 
@@ -46,7 +46,7 @@ object AtmosType {
         fontFamily = InterFont,
         fontWeight = FontWeight(200),
         fontSize = 112.sp,
-        lineHeight = 108.sp,
+        lineHeight = 112.sp,
         letterSpacing = (-4.5).sp
     )
 
