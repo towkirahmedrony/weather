@@ -36,11 +36,7 @@ jobs:
             adb shell am start -W -n com.aistudio.atmosweather.k7m2px/com.example.MainActivity || true
             sleep 25
             echo "=== PROCESS STATE ==="
-            if adb shell pidof com.aistudio.atmosweather.k7m2px; then
-              echo "APP PROCESS ALIVE"
-            else
-              echo "PROCESS NOT RUNNING (crashed)"
-            fi
+            adb shell pidof com.aistudio.atmosweather.k7m2px && echo "APP PROCESS ALIVE" || echo "PROCESS NOT RUNNING (crashed)"
             adb logcat -d > logcat.txt
             adb logcat -d -b crash > crash.txt || true
 
