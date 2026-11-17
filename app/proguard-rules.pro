@@ -16,6 +16,22 @@
 # debugging stack traces.
 #-keepattributes SourceFile,LineNumberTable
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# Retrofit ships consumer rules; these keep the annotations/generic signatures it reads at runtime.
+-keepattributes Signature, InnerClasses, EnclosingMethod
+-keepattributes RuntimeVisibleAnnotations, RuntimeVisibleParameterAnnotations
+-keep,allowobfuscation,allowshrinking interface retrofit2.Call
+-keep,allowobfuscation,allowshrinking class retrofit2.Response
+-keep,allowobfuscation,allowshrinking class kotlin.coroutines.Continuation
+
+# Moshi codegen: generated `*_JsonAdapter` classes are looked up reflectively by name.
+-keepclasseswithmembers,allowobfuscation,includedescriptorclasses class * {
+    public static com.squareup.moshi.JsonAdapter jsonAdapter(...);
+}
+-keepclassmembers class * extends com.squareup.moshi.JsonAdapter {
+    <init>(...);
+}
+-keep @com.squareup.moshi.JsonClass class * { *; }
+-keep,allowobfuscation @interface com.squareup.moshi.JsonClass
+
+# WorkManager instantiates workers by class name and persists that name across launches.
+-keep class com.example.worker.WeatherSyncWorker { <init>(...); }

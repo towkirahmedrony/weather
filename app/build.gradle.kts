@@ -43,8 +43,10 @@ android {
 
   buildTypes {
     release {
-      isCrunchPngs = false
-      isMinifyEnabled = false
+      // R8 strips unused code (including the ~99% of material-icons-extended this app never
+      // draws) and resource shrinking drops library resources nothing references.
+      isMinifyEnabled = true
+      isShrinkResources = true
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
       // Do not remove or modify this signingConfig assignment. It is necessary for Android apps in
       // AI Studio.
@@ -124,8 +126,9 @@ dependencies {
   implementation(libs.kotlinx.coroutines.android)
   implementation(libs.kotlinx.coroutines.core)
   implementation(libs.kotlinx.serialization.json)
-  implementation(libs.logging.interceptor)
-  implementation(libs.moshi.kotlin)
+  // All DTOs use @JsonClass(generateAdapter = true), so the codegen artifact is enough;
+  // the reflective "moshi-kotlin" artifact would drag in kotlin-reflect (~1MB of dex).
+  implementation(libs.moshi)
   implementation(libs.okhttp)
   implementation(libs.play.services.location)
   implementation(libs.retrofit)
