@@ -35,3 +35,8 @@
 
 # WorkManager instantiates workers by class name and persists that name across launches.
 -keep class com.example.worker.WeatherSyncWorker { <init>(...); }
+
+# Moshi resolves enum fields reflectively by constant name. R8 full mode otherwise unboxes
+# enums to ints and drops the constants, which crashes adapter construction with
+# NoSuchFieldException (observed: PressureTrend.RISING). Keep the models and their enums intact.
+-keep class com.example.domain.model.** { *; }
