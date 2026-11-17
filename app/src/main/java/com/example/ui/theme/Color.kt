@@ -22,9 +22,8 @@ val AtmosGoodEmerald = Color(0xFF34D399)
 val AtmosWarnOrange = Color(0xFFFB923C)
 
 /**
- * Redesign tokens. These come straight from the three reference exports in design_refs/
- * (Today@2x, Air@2x, Details@2x) and are the single source of truth for the
- * Today / Air / Details screens.
+ * Redesign tokens, taken directly from the three 2x design exports (Today, Air, Details).
+ * These values are the single source of truth for the Today / Air / Details screens.
  */
 object AtmosColors {
     val Background = Color(0xFF0E1418)

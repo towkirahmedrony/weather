@@ -21,7 +21,7 @@ import com.example.ui.theme.AtmosColors
  * Hand-drawn line-art weather glyphs for the redesign.
  *
  * Everything is stroked (no fills, no emoji) with rounded caps/joins so the icons stay
- * crisp at 22dp in the weekly columns and at 76dp in the hero, matching design_refs/.
+ * crisp at 22dp in the weekly columns and at 76dp in the hero.
  * Geometry is authored on a 24 x 24 grid and scaled to the requested size.
  */
 @Composable
