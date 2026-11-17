@@ -14,7 +14,6 @@ import com.example.data.remote.RainViewerApi
 import com.example.data.repository.OpenMeteoWeatherRepository
 import com.example.data.repository.WeatherRepository
 import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -24,9 +23,9 @@ import java.util.concurrent.TimeUnit
 
 class AppContainer(context: Context) {
 
-    val moshi: Moshi = Moshi.Builder()
-        .addLast(KotlinJsonAdapterFactory())
-        .build()
+    // Every type Moshi sees uses @JsonClass(generateAdapter = true), so no reflective
+    // KotlinJsonAdapterFactory is needed -- omitting it keeps kotlin-reflect out of the APK.
+    val moshi: Moshi = Moshi.Builder().build()
 
     val okHttpClient: OkHttpClient = OkHttpClient.Builder()
         .cache(Cache(File(context.cacheDir, "atmos_http_cache"), 16L * 1024L * 1024L))
